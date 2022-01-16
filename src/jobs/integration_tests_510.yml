@@ -1,0 +1,16 @@
+description: >
+  Run validate_documentation
+# What will this job do?
+# Descriptions should be short, simple, and clear.
+
+executor: cloudify-machine-510
+
+environment:
+  CLOUDIFY_SSL_TRUST_ALL: true
+  IAAS: gcp
+steps:
+  - gh/install
+  - gh/setup
+  - gh/clone
+  - run_integration_tests_510
+  
