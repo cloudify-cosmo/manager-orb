@@ -1,5 +1,0 @@
-description: >
-  This is a cloudify-machine-510 executor.
-
-machine:
-      - image: ubuntu-1604:201903-01
