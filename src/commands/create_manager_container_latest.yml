@@ -14,7 +14,10 @@ steps:
       command: sudo apt-get install -y wget
   - run:
       name: install cloudify
-      command: pip install -r test-requirements.txt
+      command: |
+          if [[ -f "test-requirements.txt" ]]; then
+              pip install -r test-requirements.txt
+          fi
   - run:
       name: download manager docker image
       command:  wget http://repository.cloudifysource.org/cloudify/6.3.0/.dev1-release/cloudify-manager-aio-docker-6.3.0-.dev1-x86_64.tar
