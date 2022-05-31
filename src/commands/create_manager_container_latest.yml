@@ -6,6 +6,7 @@ steps:
       command: git submodule update --init --recursive --remote
   - attach_workspace:
       at: workspace
+  - run: pyenv global 3.6.5
   - run:
       name: update pip
       command: pip install -U pip===20.3.3
