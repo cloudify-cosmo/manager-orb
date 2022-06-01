@@ -7,7 +7,7 @@ steps:
   - attach_workspace:
       at: workspace
   - run: sudo rm -rf /usr/bin/python
-  - run: ln -s /usr/bin/python3.8 /usr/bin/python
+  - run: sudo ln -s /usr/bin/python3.8 /usr/bin/python
   - run:
       name: update pip
       command: pip install -U pip===20.3.3
