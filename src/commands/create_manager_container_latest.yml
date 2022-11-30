@@ -22,4 +22,4 @@ steps:
       command: pip3 install https://github.com/cloudify-incubator/cloudify-ecosystem-test/archive/latest.zip
   - run:
       name: Setup our manager.
-      command: ecosystem-test create-manager
+      command: ecosystem-test create-manager --architecture x86_64
